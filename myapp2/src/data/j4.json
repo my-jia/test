@@ -1,0 +1,47 @@
+{
+  "code": 200,
+  "result": {
+    "hots": [
+      {
+        "first": "大护法",
+        "second": 1
+      },
+      {
+        "first": "欢乐颂",
+        "second": 1
+      },
+      {
+        "first": "我想和你唱",
+        "second": 1
+      },
+      {
+        "first": "神奇女侠",
+        "second": 1
+      },
+      {
+        "first": "可惜我是水瓶座",
+        "second": 1
+      },
+      {
+        "first": "水果姐",
+        "second": 1
+      },
+      {
+        "first": "我的一个道姑朋友",
+        "second": 1
+      },
+      {
+        "first": "王者荣耀",
+        "second": 1
+      },
+      {
+        "first": "杨千嬅",
+        "second": 1
+      },
+      {
+        "first": "谢春花",
+        "second": 1
+      }
+    ]
+  }
+}

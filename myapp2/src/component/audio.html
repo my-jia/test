@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>网易云音乐</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="vue-2.0.js"></script>
+		<script type="text/javascript" src="vue-resource.js"></script>
+		<style type="text/css">
+			*{
+				box-sizing: border-box;
+			}
+			
+			html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
+				margin: 0;
+				padding: 0;
+			}
+			
+			fieldset,img {
+				border: none;
+			}
+			
+			address,caption,cite,code,dfn,th,var {
+				font-style: normal;
+				font-weight: normal;
+			}
+			
+			ul,ol,li {
+				list-style: none;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			.clearfix:after{
+				content: ".";
+				clear: both;
+				display: block;
+				height: 0;
+				visibility: hidden;
+			}
+			body,html{
+				width: 100%;
+				height: 100%;
+			}
+			body{
+				background: url(../img/zjl.jpg);
+				background-size: cover;
+			}
+			img{
+				width: 300px;
+				display: block;
+				border: 1px solid #fff;
+			}
+			audio{
+				display: block;
+			}
+			#music{
+				width: 300px;
+				margin: 0 auto;
+				padding-top: 170px;
+				
+			}
+			p{
+				width: 300px;
+				height: 50px;
+				font-size: 22px;
+				margin: 0 auto;
+				text-align: center;
+				color: #E5E5E5;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div id="music">
+				<a href='#' onClick='JavaScript :history.back(1);'>
+					<img src="http://img4.imgtn.bdimg.com/it/u=1299055751,2613540059&fm=26&gp=0.jpg"/>
+				</a>
+				<audio src="../music/yddqz.mp3"
+					autoplay="autoplay"
+					controls="controls"
+					>
+				</audio>
+			</div>
+			<p>点 击 图 片 返 回</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var vue=new Vue({
+			el:"#app",
+			data:{
+				jsonUrl:"../data/lyric.json",
+				str:'',
+				arr:[]
+			},
+			created:function(){
+				this.fn();
+			},
+			methods:{
+				fn:function($http){
+					this.$http.get(this.jsonUrl).then(function(data){
+						console.log(data)
+					})
+				}
+			}
+		})
+	</script>
+</html>
